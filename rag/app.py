@@ -1,14 +1,14 @@
 import requests
 import streamlit as st
 
-from rag.config import settings
+from config import settings
 
 API_URL = settings.API_URL
 
 # Page config
-st.set_page_config(page_title="PDF Q&A Assistant", page_icon="📄", layout="centered")
+st.set_page_config(page_title="PDF Q&A Assistant", layout="centered")
 
-st.title("📄 PDF Q&A Assistant")
+st.title("PDF Q&A Assistant")
 st.markdown("---")
 
 if "pdf_uploaded" not in st.session_state:
