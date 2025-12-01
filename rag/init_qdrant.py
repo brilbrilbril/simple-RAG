@@ -1,7 +1,8 @@
 from config import settings
 from langchain_qdrant import QdrantVectorStore, RetrievalMode
 from qdrant_client import QdrantClient, models
-from qdrant_client.http.models import Distance, SparseVectorParams, VectorParams
+from qdrant_client.http.models import (Distance, SparseVectorParams,
+                                       VectorParams)
 
 
 def get_qdrant_client():
