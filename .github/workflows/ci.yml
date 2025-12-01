@@ -1,0 +1,43 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  code-quality:
+    name: Code Quality Checks
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.10'
+
+    - name: Install dependencies
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+        pip install --upgrade pip
+        pip install -r requirements.txt -r requirements-dev.txt
+
+    - name: Run Black (formatter check)
+      run: |
+        source venv/bin/activate
+        black --check rag/
+
+    - name: Run isort (import sorting check)
+      run: |
+        source venv/bin/activate
+        isort --check-only rag/
+
+    - name: Run Pylint
+      run: |
+        source venv/bin/activate
+        pylint rag/ --fail-under=7.0
