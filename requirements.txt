@@ -8,3 +8,4 @@ langchain-nvidia-ai-endpoints
 pydantic_settings
 fastapi
 uvicorn
+python-multipart
