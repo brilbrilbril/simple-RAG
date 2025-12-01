@@ -2,7 +2,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from langchain_google_genai import ChatGoogleGenerativeAI
 
-from config import settings
+from rag.config import settings
 
 
 class RAGController:

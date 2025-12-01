@@ -4,7 +4,7 @@ from langchain_community.document_loaders import PyMuPDFLoader
 from langchain_google_genai import GoogleGenerativeAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 
-from config import settings
+from rag.config import settings
 
 
 def init_embedding():

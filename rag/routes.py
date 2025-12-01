@@ -2,10 +2,10 @@ from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.responses import JSONResponse, StreamingResponse
 from pydantic import BaseModel
 
-from controller import RAGController
-from helper_utils import chunk_docs, embed_docs, init_embedding, process_pdf
-from init_qdrant import init_vectorstore
-from prompt import prompt_template
+from rag.controller import RAGController
+from rag.helper_utils import chunk_docs, embed_docs, init_embedding, process_pdf
+from rag.init_qdrant import init_vectorstore
+from rag.prompt import prompt_template
 
 app = FastAPI()
 

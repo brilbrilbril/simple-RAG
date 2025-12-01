@@ -1,7 +1,7 @@
 import requests
 import streamlit as st
 
-from config import settings
+from rag.config import settings
 
 API_URL = settings.API_URL
 
