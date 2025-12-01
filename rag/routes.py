@@ -4,8 +4,7 @@ from langchain_core.prompts import ChatPromptTemplate
 from pydantic import BaseModel
 
 from rag.controller import RAGController
-from rag.helper_utils import (chunk_docs, embed_docs, init_embedding,
-                              process_pdf)
+from rag.helper_utils import chunk_docs, embed_docs, init_embedding, process_pdf
 from rag.init_qdrant import init_vectorstore
 from rag.prompt import prompt_template
 

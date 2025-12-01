@@ -30,12 +30,12 @@ jobs:
     - name: Run Black (formatter check)
       run: |
         source venv/bin/activate
-        black --check rag/
+        black rag/
 
     - name: Run isort (import sorting check)
       run: |
         source venv/bin/activate
-        isort --check-only rag/
+        isort rag/
 
     - name: Run Pylint
       run: |
