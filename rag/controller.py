@@ -1,8 +1,8 @@
-# from langchain_nvidia import ChatNVIDIA
-from config import settings
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnablePassthrough
 from langchain_google_genai import ChatGoogleGenerativeAI
+
+from rag.config import settings
 
 
 class RAGController:
