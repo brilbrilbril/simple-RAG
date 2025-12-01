@@ -1,0 +1,10 @@
+streamlit
+langchain
+langchain-qdrant
+langchain-text-splitters
+langchain-community
+pymupdf
+langchain-nvidia-ai-endpoints
+pydantic_settings
+fastapi
+uvicorn
