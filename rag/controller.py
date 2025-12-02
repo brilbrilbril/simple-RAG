@@ -22,7 +22,7 @@ class RAGController:
 
     def generate_stream_response(self, question):
         retriever = self.vectorstore.as_retriever(
-            search_type="mmr", search_kwargs={"k": 5, "fetch_k": 10, "lambda_mult": 1}
+            search_type="mmr", search_kwargs={"k": 10, "fetch_k": 20, "lambda_mult": 1}
         )
         qna_chain = (
             {"context": retriever | self.format_docs, "question": RunnablePassthrough()}

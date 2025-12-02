@@ -9,3 +9,4 @@ pydantic_settings
 fastapi
 uvicorn
 python-multipart
+langchain_google_genai

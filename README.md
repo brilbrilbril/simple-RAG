@@ -28,6 +28,20 @@ Optional, install the development kit
 pip install -r requirements-dev.txt
 ```
 
+4. create .env file:
+
+```
+GEMINI_API_KEY=YOUR_GEMINI_API_KEY
+
+EMBEDDING_MODEL=models/gemini-embedding-001
+
+QDRANT_COLLECTION_NAME=demo_collection
+
+CHAT_MODEL=gemini-2.0-flash
+
+API_URL=http://localhost:8000
+```
+
 4. run the backend service
 
 ```
